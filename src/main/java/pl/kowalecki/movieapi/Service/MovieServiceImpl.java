@@ -1,8 +1,9 @@
-package pl.kowalecki.movieapi;
+package pl.kowalecki.movieapi.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RestController;
+import pl.kowalecki.movieapi.Model.Movie;
 
 import java.util.ArrayList;
 import java.util.List;

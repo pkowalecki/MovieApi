@@ -1,4 +1,6 @@
-package pl.kowalecki.movieapi;
+package pl.kowalecki.movieapi.Service;
+
+import pl.kowalecki.movieapi.Model.Movie;
 
 import java.util.List;
 

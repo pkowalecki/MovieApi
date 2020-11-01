@@ -1,4 +1,4 @@
-package pl.kowalecki.movieapi;
+package pl.kowalecki.movieapi.Model;
 
 import javax.persistence.Id;
 
