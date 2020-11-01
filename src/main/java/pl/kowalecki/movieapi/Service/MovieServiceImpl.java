@@ -34,11 +34,16 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public boolean getMovieByName(Movie movie, String name){
-        Movie getMovie = new Movie(movie.getMovie_id(), movie.getMovie_name(), movie.getMovie_genre());
+    public List<Movie> getMovieByName(String name){
+        List<Movie> movie = new ArrayList<>();
         String sql = "SELECT * FROM movies WHERE movie_name=?";
-        jdbcTemplate.update(sql, getMovie.getMovie_id(), getMovie.getMovie_name(), getMovie.getMovie_genre(), name);
-        return true;
+        List<Map<String, Object>> maps = jdbcTemplate.queryForList(sql, name);
+        maps.forEach(element -> movie.add(new Movie(
+                (Integer) element.get("movie_id"),
+                String.valueOf(element.get("movie_name")),
+                String.valueOf(element.get("movie_genre"))
+        )));
+        return movie;
     }
 
     @Override

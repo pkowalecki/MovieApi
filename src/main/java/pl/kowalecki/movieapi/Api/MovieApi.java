@@ -31,10 +31,10 @@ public class MovieApi {
     }
 
     @GetMapping("getMovie/{name}")
-    public ResponseEntity<HttpStatus> getMovie(@PathVariable String name, Movie movie
+    public ResponseEntity<List<Movie>> getMovie(@PathVariable String name
     ){
-        if (movieService.getMovieByName(movie, name)){
-            return new ResponseEntity<>(HttpStatus.FOUND);
+        if (!movieService.getMovieByName(name).isEmpty()){
+            return new ResponseEntity<>(movieService.getMovieByName(name),HttpStatus.FOUND);
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
