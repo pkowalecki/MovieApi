@@ -30,7 +30,7 @@ public class MovieApi {
         }
     }
 
-    @GetMapping("/getMovie/{name}")
+    @GetMapping("getMovie/{name}")
     public ResponseEntity<HttpStatus> getMovie(@PathVariable String name, Movie movie
     ){
         if (movieService.getMovieByName(movie, name)){
