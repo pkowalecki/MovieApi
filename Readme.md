@@ -77,12 +77,12 @@ W moim przypadku wysyłam obiekt JSON z wykorzystaniem metody POST:<br>
 Po wysłaniu takiego żądania do mojej bazy danych dodany zostanie film z podanymi wyżej informacjami.<br><br>
 
 .../movieapi/Api/MovieApi.java<br>
-![getAll()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L24) <br>
-getMovie()<br>
-addMovie()<br>
-deleteMovie()<br>
-editMovie()<br>
-editGenre()<br>
+[getAll()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L24) <br>
+[getMovie()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L33)<br>
+[addMovie()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L43)<br>
+[deleteMovie()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L52)<br>
+[editMovie()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L61)<br>
+[editGenre()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L70)<br>
 .../movieapi/Database/DbConfig.java<br>
 <br>
 .../movieapi/Model/Movie.java<br>
