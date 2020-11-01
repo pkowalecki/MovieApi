@@ -34,6 +34,14 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    public boolean getMovieByName(Movie movie, String name){
+        Movie getMovie = new Movie(movie.getMovie_id(), movie.getMovie_name(), movie.getMovie_genre());
+        String sql = "SELECT * FROM movies WHERE movie_name=?";
+        jdbcTemplate.update(sql, getMovie.getMovie_id(), getMovie.getMovie_name(), getMovie.getMovie_genre(), name);
+        return true;
+    }
+
+    @Override
     public boolean addMovie(Movie movie) {
         Movie newMovie = new Movie(movie.getMovie_id(), movie.getMovie_name(), movie.getMovie_genre());
         String sql = "INSERT INTO movies VALUES (?,?,?)";
