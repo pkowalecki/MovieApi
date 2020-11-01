@@ -6,7 +6,7 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/allMovies<br>
 ![All movies](/img/allMovies.PNG)<br><br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/getMovie/{name}<br>
-![Get one movie](/img/getMovie.PNG)<br>
+![Get one movie](/img/getMovie.PNG)<br><br>
 **POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/addMovie<br>
 **JSON STYLE:**<br>
 ```
@@ -15,9 +15,9 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 "movie_genre": "Gatunek filmu"
 }
 ```
-![Add your movie](/img/addMovie.PNG)
+![Add your movie](/img/addMovie.PNG)<br><br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/deleteMovie/{name}<br>
-![Delete movie](/img/deleteMovie.PNG)
+![Delete movie](/img/deleteMovie.PNG)<br><br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/editMovie/{name}<br>
 **JSON STYLE:**
 ```
@@ -25,7 +25,7 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 "movie_name": "Zmieniona nazwa filmu",
 }
 ```
-![Edit movie](/img/editMovie.PNG)
+![Edit movie](/img/editMovie.PNG)<br><br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/editGenre/{name}<br>
 **JSON STYLE:**<br>
 ```
@@ -34,10 +34,10 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 }
 ```
 
-![Edit genre](/img/editGenre.PNG)
+![Edit genre](/img/editGenre.PNG)<br><br>
 
 ## Zawartość aplikacji
-ResponseEntity - klasa która w odpowiedzi daje status HTTP<br>
+**ResponseEntity** - klasa która w odpowiedzi daje status HTTP<br>
 Przykład opisany poniżej w POSTMAN zwwróci nam status **202 ACCEPTED**<br>
 przykład:<br>
 ```
@@ -45,20 +45,20 @@ public ResponseEntity<HttpStatus>...(...){
     return new ResponseEntity<>(HttpStatus.ACCEPTED);
 }
 ```
-@RequestMapping("/movie") - określa ścieżkę na której dostępna jest cała aplikacja<br>
-pkowaleckimoviesapi.herokuapp.com/**movie**/...<br>
-@GetMapping("example") - adnotacja, która przyjmuje żądanie GET do aplikacji<br>
-@PostMapping("example") - adnotacja, która  która przyjmuje żądanie POST do aplikacji<br>
-pkowaleckimoviesapi.herokuapp.com/movie/**example**<br>
-@PathVariable  - adnotacja, która bezpośrednio w ścieżce ustawia żądanie<br>
+**@RequestMapping("/movie"**) - określa ścieżkę na której dostępna jest cała aplikacja<br>
+pkowaleckimoviesapi.herokuapp.com/**movie**/...<br><br>
+**@GetMapping("example")** - adnotacja, która przyjmuje żądanie GET do aplikacji<br><br>
+**@PostMapping("example")** - adnotacja, która  która przyjmuje żądanie POST do aplikacji<br>
+pkowaleckimoviesapi.herokuapp.com/movie/**example**<br><br>
+**@PathVariable**  - adnotacja, która bezpośrednio w ścieżce ustawia żądanie<br>
 przykład:<br>
 pkowaleckimoviesapi.herokuapp.com/movie/**name**<br>
 ```
 @GetMapping("example/{name}")
     public ResponseEntity<List<Movie>> getMovie(@PathVariable String name){...}
 ```
-<br>
-@RequestBody - adnotacja, którą stosujemy w przypadku przesłania żądania poprzez body.<br>
+<br><br>
+**@RequestBody** - adnotacja, którą stosujemy w przypadku przesłania żądania poprzez body.<br>
 przykład:<br>
 pkowaleckimoviesapi.herokuapp.com/movie/**addMovie**<br>
 ```
@@ -74,10 +74,10 @@ W moim przypadku wysyłam obiekt JSON z wykorzystaniem metody POST:<br>
 }
 ```
 <br>
-Po wysłaniu takiego żądania do mojej bazy danych dodany zostanie film z podanymi wyżej informacjami.<br>
-<br>
+Po wysłaniu takiego żądania do mojej bazy danych dodany zostanie film z podanymi wyżej informacjami.<br><br>
+
 .../movieapi/Api/MovieApi.java<br>
-[getAll()](src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L24) <br>
+![getAll()](https://github.com/pkowalecki/MovieApi/blob/main/src/main/java/pl/kowalecki/movieapi/Api/MovieApi.java#L24) <br>
 getMovie()<br>
 addMovie()<br>
 deleteMovie()<br>
