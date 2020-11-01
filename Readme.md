@@ -4,7 +4,7 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 ## Operacje na API
 
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/allMovies<br>
-![All movies](/img/allMovies.PNG)<br>
+![All movies](/img/allMovies.PNG)<br><br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/getMovie/{name}<br>
 ![Get one movie](/img/getMovie.PNG)<br>
 **POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/addMovie<br>
