@@ -45,12 +45,12 @@ public ResponseEntity<HttpStatus>...(...){
     return new ResponseEntity<>(HttpStatus.ACCEPTED);
 }
 ```
-@RequestMapping("/movie") - określa ścieżkę na której dostępna jest cała aplikacja<br>
+**@RequestMapping("/movie")** - określa ścieżkę na której dostępna jest cała aplikacja<br>
 pkowaleckimoviesapi.herokuapp.com/**movie**/...<br>
-@GetMapping("example") - adnotacja, która przyjmuje żądanie GET do aplikacji<br>
-@PostMapping("example") - adnotacja, która  która przyjmuje żądanie POST do aplikacji<br>
+**@GetMapping("example")** - adnotacja, która przyjmuje żądanie GET do aplikacji<br>
+**@PostMapping("example")** - adnotacja, która  która przyjmuje żądanie POST do aplikacji<br>
 pkowaleckimoviesapi.herokuapp.com/movie/**example**<br>
-@PathVariable  - adnotacja, która bezpośrednio w ścieżce ustawia żądanie<br>
+**@PathVariable**  - adnotacja, która bezpośrednio w ścieżce ustawia żądanie<br>
 przykład:<br>
 pkowaleckimoviesapi.herokuapp.com/movie/**name**<br>
 ```
@@ -58,7 +58,7 @@ pkowaleckimoviesapi.herokuapp.com/movie/**name**<br>
     public ResponseEntity<List<Movie>> getMovie(@PathVariable String name){...}
 ```
 <br>
-@RequestBody - adnotacja, którą stosujemy w przypadku przesłania żądania poprzez body.<br>
+**@RequestBody** - adnotacja, którą stosujemy w przypadku przesłania żądania poprzez body.<br>
 przykład:<br>
 pkowaleckimoviesapi.herokuapp.com/movie/**addMovie**<br>
 ```
