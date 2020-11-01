@@ -3,12 +3,12 @@ Api, które umożliwia dodanie/usunięcie/wyświetlenie/edycję filmu w bazie da
 Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Connectivity.<br>
 ## Operacje na API
 
-**GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/allMovies <br>
+**GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/allMovies<br>
 ![All movies](/img/allMovies.PNG)<br>
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/getMovie/{name}<br>
-![Get one movie](/img/getMovie.PNG)
-**POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/addMovie <br>
-**JSON STYLE: **
+![Get one movie](/img/getMovie.PNG)<br>
+**POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/addMovie<br>
+**JSON STYLE: **<br>
 ```
 {
 "movie_name": "Nazwa filmu",
@@ -25,7 +25,6 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 "movie_name": "Zmieniona nazwa filmu",
 }
 ```
-<br>
 ![Edit movie](/img/editMovie.PNG)
 **GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/editGenre/{name}<br>
 **JSON STYLE: **<br>
