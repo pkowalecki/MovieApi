@@ -184,4 +184,6 @@ JSON przekazywany przez BODY:<br>
 **spring.datasource.password=** hasło do bazy danych  <br>
 **spring.jpa.show-sql=** Najprostszy sposób zrzucenia zapytań do standardowego wyjścia <br>
 
-### Diagramy UML
+### Diagram klas
+
+![Class Diagram](/img/classDiagram.PNG)<br>
