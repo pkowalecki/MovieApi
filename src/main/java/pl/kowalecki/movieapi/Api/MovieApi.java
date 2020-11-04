@@ -10,7 +10,7 @@ import pl.kowalecki.movieapi.Service.MovieService;
 
 import java.util.List;
 
-@RequestMapping
+@RequestMapping("/movie")
 @RestController
 public class MovieApi {
 
@@ -21,7 +21,7 @@ public class MovieApi {
         this.movieService = movieService;
     }
 
-    @GetMapping(value = "movie", produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String welcome(){
         return
