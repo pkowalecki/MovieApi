@@ -2,6 +2,7 @@ package pl.kowalecki.movieapi.Api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.kowalecki.movieapi.Model.Movie;
@@ -9,7 +10,7 @@ import pl.kowalecki.movieapi.Service.MovieService;
 
 import java.util.List;
 
-@RequestMapping("/movie")
+@RequestMapping
 @RestController
 public class MovieApi {
 
@@ -20,6 +21,22 @@ public class MovieApi {
         this.movieService = movieService;
     }
 
+    @GetMapping(value = "movie", produces = MediaType.TEXT_HTML_VALUE)
+    @ResponseBody
+    public String welcome(){
+        return
+       "<html>\n"
+       +"<h1>Movie API</h1><br>\n"
+       +"Endpointy w API na których można operować:<br>\n"
+       +"Aby wysyłać zapytania do aplikacji należu użyć programu do zarządzania API<br><br>\n"
+       + "Lista wszystkich filmów: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/allMovies <br><br>\n"
+       +"Dane o konkretnym filmie: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/getMovie/nazwaFilmu<br><br>\n"
+       +"Dodawanie filmu: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/addMovie<br><br>\n"
+       +"Usuwanie filmu: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/deleteMovie/nazwaFilmu<br><br>\n"
+       + "Edycja filmu: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/editMovie/nazwaFilmu<br><br>\n"
+       +"Edycja gatunku: <br>https://pkowaleckimoviesapi.herokuapp.com/movie/editGenre/nazwaFilmu<br><br>\n"
+       +"<html>";
+    }
     @GetMapping("allMovies")
     public ResponseEntity<List<Movie>> getAll() {
         if(!movieService.getAll().isEmpty()) {
