@@ -16,9 +16,9 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 }
 ```
 ![Add your movie](/img/addMovie.PNG)<br><br>
-**GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/deleteMovie/{name}<br>
+**DELETE:** https://pkowaleckimoviesapi.herokuapp.com/movie/deleteMovie/{name}<br>
 ![Delete movie](/img/deleteMovie.PNG)<br><br>
-**GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/editMovie/{name}<br>
+**POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/editMovie/{name}<br>
 **JSON STYLE:**
 ```
 {
@@ -26,7 +26,7 @@ Połączenie z bazą danych wykonane zostało poprzez JDBC - Java DataBase Conne
 }
 ```
 ![Edit movie](/img/editMovie.PNG)<br><br>
-**GET:** https://pkowaleckimoviesapi.herokuapp.com/movie/editGenre/{name}<br>
+**POST:** https://pkowaleckimoviesapi.herokuapp.com/movie/editGenre/{name}<br>
 **JSON STYLE:**<br>
 ```
 {
