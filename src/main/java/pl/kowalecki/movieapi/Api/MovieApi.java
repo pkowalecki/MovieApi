@@ -66,7 +66,7 @@ public class MovieApi {
         }
     }
 
-    @GetMapping("deleteMovie/{name}")
+    @DeleteMapping("deleteMovie/{name}")
     public ResponseEntity<HttpStatus> deleteMovie(@PathVariable String name){
         if(movieService.deleteMovie(name)){
             return new ResponseEntity<>(HttpStatus.OK);
@@ -75,7 +75,7 @@ public class MovieApi {
         }
     }
 
-    @GetMapping("editMovie/{name}")
+    @PostMapping("editMovie/{name}")
     public ResponseEntity<HttpStatus> editMovie(@PathVariable String name, @RequestBody Movie movie){
         if(movieService.editName(movie, name)){
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
@@ -84,7 +84,7 @@ public class MovieApi {
         }
     }
 
-    @GetMapping("editGenre/{name}")
+    @PostMapping("editGenre/{name}")
     public ResponseEntity<HttpStatus> editGenre(@PathVariable String name, @RequestBody Movie movie){
         if(movieService.editGenre(movie, name)){
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
